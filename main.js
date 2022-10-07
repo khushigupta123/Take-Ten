@@ -788,7 +788,7 @@ function OpenInNew(min, tab, type) {
           animation: "slide-from-top",
           filter: 'blur(10px)',
           allowOutsideClick: false,
-          // imageUrl: getRandomTimeUp(gifTime, '/assets/gifs/'),
+          // imageUrl: getRandomTimeUp(gifTime, 'gifs/'),
         }).then((result) => {
           if (result.isConfirmed == false) {
            return window.location = "./index.html";
@@ -1041,21 +1041,21 @@ var sites = [
 ];
 
 function updateSites() {
-  $('.rig.columns-6.websites').append("<a data-toggle='modal' data-target='#myModal' class='addCustom'><li class='outbound-link'><img id='Add Site' src='assets/plus.png'><p>Add Site</p></li></a>")
+  $('.rig.columns-6.websites').append("<a data-toggle='modal' data-target='#myModal' class='addCustom'><li class='outbound-link'><img id='Add Site' src='plus.png'><p>Add Site</p></li></a>")
   for (i = 0; i < sites.length; i++) {
     siteName = sites[i][0];
     siteLabel = sites[i][1];
 
     if (siteName == 'Youtube') {
-      imgSrc = 'assets/youtube.png'
+      imgSrc = 'youtube.png'
     } else if (siteName == "Netflix") {
-      imgSrc = "assets/netflix.png"
+      imgSrc = "netflix.png"
     } else if (siteName == "Facebook") {
-      imgSrc = "assets/facebook.png"
+      imgSrc = "facebook.png"
     } else if (siteName == "Instagram") {
-      imgSrc = "assets/instagram.png"
+      imgSrc = "instagram.png"
     } else if (siteName == 'Reddit') {
-      imgSrc = 'assets/reddit.png'
+      imgSrc = 'reddit.png'
     } else {
       imgSrc = 'https://logo.clearbit.com/' + siteName.toLowerCase();
     }
@@ -1098,11 +1098,11 @@ function addGridElement(siteLabel, siteLink) {
     url: testLink,
     success: function () {
       $('.rig.columns-6.websites').append("<a class='siteLink' data-link=" + siteLink + " target='_blank'><li class='outbound-link' class='outbound-link'><img id='" + siteLabel + "' src='https://logo.clearbit.com/" + newLabel.toLowerCase() + ".com'/><p>" + newSiteLabel + "</p></li></a>");
-      $('.rig.columns-6.websites').append("<img src='assets/delete.svg' class='delete' id='delete' data-tab = '" + siteLabel + "' data-name='" + siteLink + "'>");
+      $('.rig.columns-6.websites').append("<img src='delete.svg' class='delete' id='delete' data-tab = '" + siteLabel + "' data-name='" + siteLink + "'>");
     },
     error: function () {
-      $('.rig.columns-6.websites').append("<a class='siteLink' data-link=" + siteLink + " target='_blank'><li class='outbound-link' class='outbound-link'><img id='" + siteLabel + "' src='assets//web.png'/><p>" + newSiteLabel + "</p></li></a>");
-      $('.rig.columns-6.websites').append("<img src='assets/delete.svg' style='cursor:pointer' id='delete' class='delete' data-tab = '" + siteLabel + "' data-name='" + siteLink + "'>");
+      $('.rig.columns-6.websites').append("<a class='siteLink' data-link=" + siteLink + " target='_blank'><li class='outbound-link' class='outbound-link'><img id='" + siteLabel + "' src='web.png'/><p>" + newSiteLabel + "</p></li></a>");
+      $('.rig.columns-6.websites').append("<img src='delete.svg' style='cursor:pointer' id='delete' class='delete' data-tab = '" + siteLabel + "' data-name='" + siteLink + "'>");
     }
   });
 };
